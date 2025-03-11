@@ -20,11 +20,15 @@ public class TasksService {
         return FXCollections.observableArrayList(tasks.getAll());
     }
     public String getIntervalInHours(Task task){
+        final int SECONDS_IN_MINUTE = 60;
+        final int MINUTES_IN_HOUR = 60;
+
         int seconds = task.getRepeatInterval();
-        int minutes = seconds / DateService.SECONDS_IN_MINUTE;
-        int hours = minutes / DateService.MINUTES_IN_HOUR;
-        minutes = minutes % DateService.MINUTES_IN_HOUR;
-        return formTimeUnit(hours) + ":" + formTimeUnit(minutes);//hh:MM
+        int minutes = seconds / SECONDS_IN_MINUTE;
+        int hours = minutes / MINUTES_IN_HOUR;
+        minutes = minutes % MINUTES_IN_HOUR;
+
+        return formTimeUnit(hours) + ":" + formTimeUnit(minutes); // hh:MM
     }
     public String formTimeUnit(int timeUnit){
         StringBuilder sb = new StringBuilder();
@@ -36,13 +40,26 @@ public class TasksService {
         return sb.toString();
     }
 
-    public int parseFromStringToSeconds(String stringTime){//hh:MM
-        String[] units = stringTime.split(":");
-        int hours = Integer.parseInt(units[0]);
-        int minutes = Integer.parseInt(units[1]);
-        int result = (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
-        return result;
+    public int parseFromStringToSeconds(String stringTime) { // hh:MM
+        if (!stringTime.matches("^\\d{1,2}:\\d{2}$")) {
+            throw new IllegalArgumentException("Invalid time format. Expected HH:MM.");
+        }
+
+        try {
+            String[] units = stringTime.split(":");
+            int hours = Integer.parseInt(units[0]);
+            int minutes = Integer.parseInt(units[1]);
+
+            if (hours < 0 || hours >= 24 || minutes < 0 || minutes >= 60) {
+                throw new IllegalArgumentException("Hour must be between 0-23 and minutes between 0-59.");
+            }
+
+            return (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Invalid numeric values in time string.", e);
+        }
     }
+
 
     public Iterable<Task> filterTasks(Date start, Date end){
         TasksOperations tasksOps = new TasksOperations(getObservableList());
