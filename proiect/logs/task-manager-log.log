@@ -20,3 +20,61 @@
 2025-03-07 19:18:52 INFO  Main:35 - saved data reading
 2025-03-07 19:18:52 INFO  Main:40 - application start
 2025-03-07 19:18:52 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:12:44 INFO  Main:35 - saved data reading
+2025-03-11 10:12:44 INFO  Main:40 - application start
+2025-03-11 10:12:44 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:12:50 INFO  Main:35 - saved data reading
+2025-03-11 10:12:50 INFO  Main:40 - application start
+2025-03-11 10:12:50 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:12:52 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:12:59 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:13:08 INFO  Main:35 - saved data reading
+2025-03-11 10:13:08 INFO  Main:40 - application start
+2025-03-11 10:13:08 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:13:11 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:13:13 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:13:43 INFO  Main:35 - saved data reading
+2025-03-11 10:13:43 INFO  Main:40 - application start
+2025-03-11 10:13:43 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:13:45 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:13:58 INFO  Main:35 - saved data reading
+2025-03-11 10:13:58 INFO  Main:40 - application start
+2025-03-11 10:13:59 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:14:00 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:14:12 INFO  Main:35 - saved data reading
+2025-03-11 10:14:12 INFO  Main:40 - application start
+2025-03-11 10:14:12 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:14:14 INFO  NewEditController:91 - new/edit window initializing
+2025-03-11 10:14:24 INFO  Main:35 - saved data reading
+2025-03-11 10:14:24 INFO  Main:40 - application start
+2025-03-11 10:14:24 INFO  Controller:74 - Main controller initializing
+2025-03-11 10:14:25 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:08:24 INFO  Main:35 - saved data reading
+2025-03-22 21:08:24 INFO  Main:40 - application start
+2025-03-22 21:08:25 INFO  Controller:74 - Main controller initializing
+2025-03-22 21:08:29 INFO  TaskInfoController:24 - task info window initializing
+2025-03-22 21:08:29 ERROR Controller:127 - error loading task-info.fxml
+2025-03-22 21:08:31 INFO  TaskInfoController:24 - task info window initializing
+2025-03-22 21:08:31 ERROR Controller:127 - error loading task-info.fxml
+2025-03-22 21:08:33 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:08:47 INFO  NewEditController:203 - Task{title='a', time=Thu Mar 15 08:00:00 EET 2018, start=Thu Mar 15 08:00:00 EET 2018, end=Sat Mar 22 10:00:00 EET 2025, interval=1800, active=false}
+2025-03-22 21:09:55 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:10:16 INFO  NewEditController:203 - Task{title='a', time=Sat Mar 22 08:00:00 EET 2025, start=Sat Mar 22 08:00:00 EET 2025, end=Sat Mar 22 08:00:00 EET 2025, interval=0, active=false}
+2025-03-22 21:10:18 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:10:30 INFO  NewEditController:203 - Task{title='ax', time=Sat Mar 22 08:00:00 EET 2025, start=Sat Mar 22 08:00:00 EET 2025, end=Sat Mar 22 10:00:00 EET 2025, interval=1800, active=false}
+2025-03-22 21:17:04 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:17:21 ERROR Task:26 - time below bound
+2025-03-22 21:17:26 ERROR Task:26 - time below bound
+2025-03-22 21:17:28 ERROR Task:36 - time below bound
+2025-03-22 21:19:25 ERROR Task:26 - time below bound
+2025-03-22 21:19:31 ERROR Task:26 - time below bound
+2025-03-22 21:19:36 INFO  NewEditController:203 - Task{title='asx', time=Fri Mar 20 04:00:00 EET 1970, start=Fri Mar 20 04:00:00 EET 1970, end=Fri Mar 20 04:00:00 EET 1970, interval=0, active=false}
+2025-03-22 21:22:34 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:23:08 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:23:13 INFO  NewEditController:203 - Task{title='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', time=Sat Mar 22 08:00:00 EET 2025, start=Sat Mar 22 08:00:00 EET 2025, end=Sat Mar 22 08:00:00 EET 2025, interval=0, active=false}
+2025-03-22 21:23:18 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:23:20 INFO  NewEditController:203 - Task{title='OHaeBAsLxokgKGTcTl7yKgZ7ysWJ0Ul7ezHeTM5hAW6HmgydGDKOpifQzZ4N4AKmTgtxrl9KhjUSsSsE0QWLVEhzOz4Sofkhme8ZTnm3Nv2QGHLju3kQ9TysjaX3o nssK3e2YTS4aIAykOjHIYleUoBqLQH4J9RHFS6JuVKK2VBJE8RJtu1FFRvKYKQDpaJx2', time=Sat Mar 22 08:00:00 EET 2025, start=Sat Mar 22 08:00:00 EET 2025, end=Sat Mar 22 08:00:00 EET 2025, interval=0, active=false}
+2025-03-22 21:23:25 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:23:29 INFO  TaskInfoController:24 - task info window initializing
+2025-03-22 21:29:10 INFO  NewEditController:91 - new/edit window initializing
+2025-03-22 21:30:19 INFO  NewEditController:203 - Task{title='', time=Wed Mar 17 08:00:00 EET 2010, start=Wed Mar 17 08:00:00 EET 2010, end=Wed Mar 17 08:00:00 EET 2010, interval=0, active=false}
