@@ -30,6 +30,8 @@ public class Task implements Serializable, Cloneable {
         this.time = time;
         this.start = time;
         this.end = time;
+
+        this.active=true;
     }
     public Task(String title, Date start, Date end, int interval){
         if (start.getTime() < 0 || end.getTime() < 0) {
