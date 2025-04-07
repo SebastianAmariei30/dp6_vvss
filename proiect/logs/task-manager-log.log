@@ -78,3 +78,16 @@
 2025-03-22 21:23:29 INFO  TaskInfoController:24 - task info window initializing
 2025-03-22 21:29:10 INFO  NewEditController:91 - new/edit window initializing
 2025-03-22 21:30:19 INFO  NewEditController:203 - Task{title='', time=Wed Mar 17 08:00:00 EET 2010, start=Wed Mar 17 08:00:00 EET 2010, end=Wed Mar 17 08:00:00 EET 2010, interval=0, active=false}
+2025-04-06 22:02:52 INFO  Main:35 - saved data reading
+2025-04-06 22:02:52 INFO  Main:40 - application start
+2025-04-06 22:02:53 INFO  Controller:74 - Main controller initializing
+2025-04-06 22:03:05 INFO  Main:35 - saved data reading
+2025-04-06 22:03:05 INFO  Main:40 - application start
+2025-04-06 22:03:05 INFO  Controller:74 - Main controller initializing
+2025-04-07 13:15:17 ERROR Task:36 - time below bound
+2025-04-07 13:15:45 ERROR Task:36 - time below bound
+2025-04-07 13:23:18 ERROR Task:36 - time below bound
+2025-04-07 13:27:35 ERROR Task:36 - time below bound
+2025-04-07 13:27:35 ERROR Task:36 - time below bound
+2025-04-07 13:41:35 ERROR Task:36 - time below bound
+2025-04-07 13:41:35 ERROR Task:36 - time below bound

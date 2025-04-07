@@ -22,6 +22,11 @@ public class TasksOperations {
                 System.out.println(t.getTitle());
             }
         }
+        if(incomingTasks.isEmpty()){
+            ArrayList<Task> emptyList= new ArrayList<>();
+            emptyList.add(new Task("Empty",new Date()));
+            return emptyList;
+        }
         return incomingTasks;
     }
     public SortedMap<Date, Set<Task>> calendar( Date start, Date end){
