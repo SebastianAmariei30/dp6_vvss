@@ -5,6 +5,10 @@ import org.junit.jupiter.api.*;
 import java.util.Calendar;
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.*;
+
 class BBTTest {
     private ArrayTaskList taskList;
 
@@ -22,7 +26,7 @@ class BBTTest {
         Task task = new Task("Do it", new Date(), new Date(), 1);
 
         Assertions.assertDoesNotThrow(() -> taskList.add(task));
-        Assertions.assertEquals(2, taskList.size());
+        assertEquals(2, taskList.size());
     }
 
     @Test
@@ -31,7 +35,7 @@ class BBTTest {
             Task task = new Task(null, new Date(), new Date(), 1);
             taskList.add(task);
         });
-        Assertions.assertEquals(1, taskList.size());
+        assertEquals(1, taskList.size());
     }
 
 
@@ -47,7 +51,7 @@ class BBTTest {
         Task task = new Task("Do it", startDate, endDate, 1);
 
         Assertions.assertDoesNotThrow(() -> taskList.add(task));
-        Assertions.assertEquals(2, taskList.size());
+        assertEquals(2, taskList.size());
     }
 
     @Test
@@ -64,7 +68,7 @@ class BBTTest {
             Task task = new Task("Do it", startDate, endDate, 1);
             taskList.add(task);
         });
-        Assertions.assertEquals(1, taskList.size());
+        assertEquals(1, taskList.size());
     }
 
     //BVA
@@ -74,7 +78,7 @@ class BBTTest {
         Task task = new Task("D", new Date(), new Date(), 1);
 
         Assertions.assertDoesNotThrow(() -> taskList.add(task));
-        Assertions.assertEquals(2, taskList.size());
+        assertEquals(2, taskList.size());
     }
     @Tag("bva")
     @Test
@@ -83,7 +87,7 @@ class BBTTest {
             Task task = new Task("", new Date(), new Date(), 1);
             taskList.add(task);
         });
-        Assertions.assertEquals(1, taskList.size());
+        assertEquals(1, taskList.size());
     }
     @Nested
     class Bva2{
@@ -99,7 +103,7 @@ class BBTTest {
         Task task = new Task("Do it", startDate, endDate, 1);
 
         Assertions.assertDoesNotThrow(() -> taskList.add(task));
-        Assertions.assertEquals(2, taskList.size());
+        assertEquals(2, taskList.size());
     }
 
         @Test
@@ -116,8 +120,38 @@ class BBTTest {
                 Task task = new Task("Do it", startDate, endDate, 1);
                 taskList.add(task);
             });
-            Assertions.assertEquals(1, taskList.size());
+            assertEquals(1, taskList.size());
         }
     }
 
+}
+
+class SpyTest{
+    ArrayTaskList taskList;
+
+    @BeforeEach
+    void setUp() {
+        taskList = spy(new ArrayTaskList()); // folosim spy ca să putem verifica metode
+    }
+
+    @Test
+    void testAddTask() {
+        Task task = new Task("New Task", new Date(0));
+        taskList.add(task);
+
+        verify(taskList, times(1)).add(task);
+        assertEquals(1, taskList.size());
+        assertEquals(task, taskList.getTask(0));
+    }
+
+    @Test
+    void testRemoveTask() {
+        Task task = new Task("Task to Remove", new Date(0));
+        taskList.add(task);
+        boolean removed = taskList.remove(task);
+
+        verify(taskList, times(1)).remove(task);
+        assertTrue(removed);
+        assertEquals(0, taskList.size());
+    }
 }

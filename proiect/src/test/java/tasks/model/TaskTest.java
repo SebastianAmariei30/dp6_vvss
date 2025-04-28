@@ -1,36 +1,37 @@
 package tasks.model;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.text.ParseException;
 import java.util.Date;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
 
-    private Task task;
-
-    @BeforeEach
-    void setUp() {
-        try {
-            task=new Task("new task",Task.getDateFormat().parse("2023-02-12 10:10"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+    @Test
+    void testCreateTaskWithoutRepeat() {
+        Task task = new Task("Task 1", new Date(1000));
+        assertEquals("Task 1", task.getTitle());
+        assertEquals(new Date(1000), task.getStartTime());
+        assertFalse(task.isRepeated());
     }
 
     @Test
-    void testTaskCreation() throws ParseException {
-       assert task.getTitle() == "new task";
-        System.out.println(task.getFormattedDateStart());
-        System.out.println(task.getDateFormat().format(Task.getDateFormat().parse("2023-02-12 10:10")));
-       assert task.getFormattedDateStart().equals(task.getDateFormat().format(Task.getDateFormat().parse("2023-02-12 10:10")));
+    void testCreateTaskWithRepeat() {
+        Task task = new Task("Task 2", new Date(0), new Date(60000), 10);
+        assertTrue(task.isRepeated());
+        assertEquals(10, task.getRepeatInterval());
     }
 
-    @AfterEach
-    void tearDown() {
+    @Test
+    void testSetTitle() {
+        Task task = new Task("Old Title", new Date(0));
+        task.setTitle("New Title");
+        assertEquals("New Title", task.getTitle());
+    }
+
+    @Test
+    void testSetActive() {
+        Task task = new Task("Task Active", new Date(0));
+        task.setActive(false);
+        assertFalse(task.isActive());
     }
 }

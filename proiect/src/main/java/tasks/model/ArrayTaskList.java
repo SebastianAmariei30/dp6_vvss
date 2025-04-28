@@ -58,12 +58,12 @@ public class ArrayTaskList extends TaskList{
             throw new IllegalArgumentException("Start date cannot be before 1 Jan 1970.");
         }
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(task.getStartTime());
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        if (hour < 8 || hour >= 16) {
-            throw new IllegalArgumentException("Start time must be between 08:00 and 16:00.");
-        }
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(task.getStartTime());
+//        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+//        if (hour < 8 || hour >= 16) {
+//            throw new IllegalArgumentException("Start time must be between 08:00 and 16:00.");
+//        }
 
         if (numberOfTasks == currentCapacity-1){
             currentCapacity = currentCapacity * 2;
