@@ -10,4 +10,6 @@ module tasks {
     exports tasks.view;
     opens tasks.controller to javafx.fxml;
     exports tasks.controller;
+
+    opens tasks.services to org.junit.platform.commons, org.junit.jupiter.api;
 }
